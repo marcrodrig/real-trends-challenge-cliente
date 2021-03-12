@@ -53,7 +53,7 @@ const Voting: React.FC = () => {
   const verifyToken = () => {
     const tokenML = getWithExpiry("at_ML");
     if (tokenML === null) {
-      axios.get('http://localhost:5000/refresh_token', { withCredentials: true })
+      axios.get('https://realtrends-challenge-mrcrdz.herokuapp.com/refresh_token', { withCredentials: true })
         .then((response) => {
           // 1 hour
           setWithExpiry("at_ML", response.data.atML, 3600000);
