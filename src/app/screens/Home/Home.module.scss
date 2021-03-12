@@ -1,0 +1,43 @@
+.container {
+  width: 100%;
+  max-width: 480px;
+
+  .header {
+    h1 {
+      font-weight: 800;
+      font-size: 2rem;
+      margin: 0;
+      margin-bottom: 6px;
+    }
+
+    h3 {
+      font-weight: 300;
+      font-size: 1.25rem;
+      margin: 0;
+    }
+  }
+}
+
+@keyframes up-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(8px);
+  }
+}
+
+.finger {
+  -webkit-animation: up-down 1s infinite  alternate;
+  animation: up-down 1s infinite  alternate;
+}
+
+@-webkit-keyframes up-down {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+@keyframes up-down {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
